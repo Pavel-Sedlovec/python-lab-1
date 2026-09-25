@@ -1,31 +1,51 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+# #!/usr/bin/env python3
+# # -*- coding: utf-8 -*-
 
-# Есть список животных в зоопарке
-zoo = ['lion', 'kangaroo', 'elephant', 'monkey']
+# # Есть список животных в зоопарке
+# zoo = ['lion', 'kangaroo', 'elephant', 'monkey']
 
-# Посадите медведя (bear) между львом и кенгуру
-# и выведите список на консоль
-zoo.insert(1, 'bear')
-print(zoo)
-
-
-# Добавьте птиц из списка birds в последние клетки зоопарка
-birds = ['rooster', 'ostrich', 'lark']
-zoo.extend(birds)
-print(zoo)
+# # Посадите медведя (bear) между львом и кенгуру
+# # и выведите список на консоль
+# zoo.insert(1, 'bear')
+# print(zoo)
 
 
-# Уберите слона (elephant) из зоопарка
-# и выведите список на консоль
-zoo.remove('elephant')
-print(zoo)
+# # Добавьте птиц из списка birds в последние клетки зоопарка
+# birds = ['rooster', 'ostrich', 'lark']
+# zoo.extend(birds)
+# print(zoo)
 
 
-# Выведите на консоль в какой клетке сидит лев (lion) и жаворонок (lark).
-# Номера при выводе должны быть 1-индексированными (первая клетка - номер 1).
-lion_cage = zoo.index('lion') + 1
-lark_cage = zoo.index('lark') + 1
+# # Уберите слона (elephant) из зоопарка
+# # и выведите список на консоль
+# zoo.remove('elephant')
+# print(zoo)
 
-print(f"Лев сидит в клетке №{lion_cage}")
-print(f"Жаворонок сидит в клетке №{lark_cage}")
+
+# # Выведите на консоль в какой клетке сидит лев (lion) и жаворонок (lark).
+# # Номера при выводе должны быть 1-индексированными (первая клетка - номер 1).
+# lion_cage = zoo.index('lion') + 1
+# lark_cage = zoo.index('lark') + 1
+
+# print(f"Лев сидит в клетке №{lion_cage}")
+# print(f"Жаворонок сидит в клетке №{lark_cage}")
+
+def run():
+    zoo = ['lion', 'kangaroo', 'elephant', 'monkey']
+    zoo.insert(1, 'bear')
+    print(zoo)
+
+    birds = ['rooster', 'ostrich', 'lark']
+    zoo.extend(birds)
+    print(zoo)
+
+    zoo.remove('elephant')
+    print(zoo)
+
+    lion_cage = zoo.index('lion') + 1
+    lark_cage = zoo.index('lark') + 1
+    print(f"Лев сидит в клетке №{lion_cage}")
+    print(f"Жаворонок сидит в клетке №{lark_cage}")
+
+if __name__ == '__main__':
+    run()
