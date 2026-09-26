@@ -1,14 +1,11 @@
 import importlib
 import os
 import sys
-
-# Добавляем путь к соседней папке "rare" в системные пути Python
 current_dir = os.path.dirname(os.path.abspath(__file__))
 rare_dir = os.path.abspath(os.path.join(current_dir, '..', 'rare'))
 sys.path.append(rare_dir)
 
 def run_all_tasks():
-    print("=== ЗАПУСК ЛАБОРАТОРНОЙ РАБОТЫ №1 (УРОВЕНЬ MEDIUM) ===")
     
     tasks = [
         "00_distance", "01_circle", "02_operations", "03_favorite_movies",
@@ -17,11 +14,9 @@ def run_all_tasks():
     ]
     
     for task in tasks:
-        print(f"\n--- Задача {task}.py ---")
+        print(f"\nЗадача {task}.py")
         try:
-            # Динамический импорт модуля из папки rare
             module = importlib.import_module(task)
-            # Вызов инкапсулированной функции
             module.run()
         except ModuleNotFoundError:
             print(f"Ошибка: файл {task}.py не найден в папке {rare_dir}")
